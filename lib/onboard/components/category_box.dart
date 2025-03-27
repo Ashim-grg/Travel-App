@@ -21,12 +21,13 @@ class CategoryBox extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: GestureDetector(
         onTap: () {
-          oncategorySelected(!isSelected); // Toggle the selection
+          oncategorySelected(!isSelected); 
         },
         child: Container(
           width: 110,
+          padding: EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
-            color: isSelected ? Colors.orange.shade700 : Colors.white,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(5),
             border: Border.all(
               color: isSelected ? Colors.orange.shade700 : Colors.grey,
@@ -39,7 +40,7 @@ class CategoryBox extends StatelessWidget {
                 Icon(
                   iconname,
                   size: 30,
-                  color: isSelected ? Colors.white : Colors.grey,
+                  color: isSelected ? Colors.orange.shade700 : Colors.grey,
                 ),
               Expanded(
                 child: Text(
@@ -48,8 +49,8 @@ class CategoryBox extends StatelessWidget {
                   overflow: TextOverflow.ellipsis, 
                   textAlign: TextAlign.center,
                   style: GoogleFonts.afacad(
-                    fontSize: 13,
-                    color: isSelected ? Colors.white : Colors.black,
+                    fontSize: 14,
+                    color: isSelected ? Colors.orange.shade700 : Colors.grey,
                     
                   ),
                 ),

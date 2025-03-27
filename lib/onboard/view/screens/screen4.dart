@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_app/onboard/components/category_box.dart';
-import 'package:travel_app/onboard/components/category_selection.dart';
 import 'package:travel_app/onboard/model/category.dart';
 
 class Screen4 extends StatefulWidget {
-  final Function(List<bool>) onCategorySelected; // Function to handle category selection
+  final Function(List<bool>) onCategorySelected; 
 
   const Screen4({super.key, required this.onCategorySelected});
 
@@ -18,7 +17,7 @@ class _Screen4State extends State<Screen4> {
 
   void onCategorySelectedHandler(int index, bool selected) {
     setState(() {
-      categorySelected[index] = selected;  // Toggle the selected category
+      categorySelected[index] = selected; 
     });
     print("Updated category selection: $categorySelected");
     widget.onCategorySelected(categorySelected); 
@@ -89,10 +88,6 @@ class _Screen4State extends State<Screen4> {
                 height: 200,
                 child: Column(
                   children: [
-                    CategorySelection(
-                      categorySelected: categorySelected,
-                      oncategorySelected: onCategorySelectedHandler,
-                    ),
                     SizedBox(
                       height: 50,
                       child: ListView.builder(

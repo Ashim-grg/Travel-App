@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_app/onboard/components/category_box.dart';
-import 'package:travel_app/onboard/components/category_selection.dart';
 import 'package:travel_app/onboard/model/category.dart';
 
 class Screen5 extends StatefulWidget {
@@ -89,10 +88,6 @@ class _Screen5State extends State<Screen5> {
                 height: 200,
                 child: Column(
                   children: [
-                    CategorySelection(
-                      categorySelected: categorySelected,
-                      oncategorySelected: onCategorySelectedHandler,
-                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 55),
                       child: SizedBox(
