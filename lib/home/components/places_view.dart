@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:travel_app/home/model/places.dart';
+import 'package:travel_app/locations/view/pages/location_detail_page.dart';
 
 class PlacesView extends StatefulWidget {
   final Places places;
@@ -58,7 +59,17 @@ class _PlacesViewState extends State<PlacesView> {
             top: 108,
             right: 5,
             child: GestureDetector(
-              
+              onTap: (){
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context)=>
+                    LocationDetailPage(
+                      imagePath: widget.places.imagePath,
+                      placename: widget.places.placeName,
+                      description: widget.places.description,
+                    )));
+              },
               child: Container(
                 height: 35,
                 width: 35,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:travel_app/home/view/app_main_screen.dart';
 import 'package:travel_app/home/view/home_page.dart';
+import 'package:travel_app/locations/view/pages/location_detail_page.dart';
 import 'package:travel_app/onboard/view/pages/onboard_page.dart';
 import 'package:travel_app/onboard/view/screens/screen1.dart';
 
@@ -21,13 +23,20 @@ class MyApp extends StatelessWidget {
           builder: (context,state)=> OnboardPage(),
         ),
         GoRoute(
+          path: '/locationdetail',
+          builder: (context,state)=>LocationDetailPage(),
+        ),
+        GoRoute(
           path: '/screen1',
           builder: (context,state)=> Screen1(),
         ),
         GoRoute(
-          path: '/home',
-          builder: (context,state)=> HomePage(),
+          path: '/mainscreen',
+          builder: (context,state)=> AppMainScreen(),
         ),
+        GoRoute(
+          path: '/home',
+          builder: (context,state)=>HomePage())
       ]
     );
     return MaterialApp.router(
